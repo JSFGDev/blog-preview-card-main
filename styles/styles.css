@@ -3,14 +3,21 @@
     --white: hsl(0, 0%, 100%);
     --gray500: hsl(0, 0%, 42%);
     --gray950: hsl(0, 0%, 7%);
+    --black: #000000;
 
     --fuentePrincipal: "Figtree", sans-serif;
 }
 
-
+/* Attribution */
 .attribution { font-size: 1rem; text-align: center; margin: 1.5rem 0;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
+/* Global Font */
+p, h1, h2, h3, h4{
+    font-family: var(--fuentePrincipal);
+}
+
+/* Center content */
 body{
     display: grid;
     /* min-height: 100dvh; */
@@ -20,14 +27,18 @@ body{
     background-color: var(--yellow);
 }
 
+/* Main content */
+
 .main{
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
     max-width: 20rem;
     width: 95%;
+    border: 0.1rem solid var(--black);
     background-color: var(--white);
     border-radius: 2rem;
+    box-shadow: 1rem 1rem;
 }
 .image{
     display: flex;
@@ -41,19 +52,12 @@ body{
     border-radius: 2rem;
 }
 
-h4{
-    display: inline;
-}
-
 .avatar{
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-p, h1, h2, h3, h4{
-    font-family: var(--fuentePrincipal);
-}
 h1{
     font-size: 1.5rem;
     font-weight: 900;
@@ -69,7 +73,7 @@ h2{
     background-color: var(--yellow);
     display: inline-block;
     width: auto;
-    padding: 1rem;
+    padding: 0.7rem;
     font-size: 1.2rem;
     border-radius: 0.5rem;
 }
@@ -86,5 +90,6 @@ h4{
 p{
     font-size: 1.2rem;
     color: var(--gray500);
+    /* add only margin bottom */
     margin: 0 0 1rem 0;
 }
